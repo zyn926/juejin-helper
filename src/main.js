@@ -63,17 +63,17 @@ const main = async () => {
   growth.sumCount = counts.sum_count
 
   // 沾喜气
-  const lotteryHistory = await juejin.getLotteryHistory()
-  const lotteries = lotteryHistory.lotteries || []
+  //const lotteryHistory = await juejin.getLotteryHistory()
+  //const lotteries = lotteryHistory.lotteries || []
 
-  if (lotteries.length > 0) {
-    const [firstLottery] = lotteries
-    const dipLuckyResult = await juejin.dipLucky(firstLottery.history_id)
+  //if (lotteries.length > 0) {
+    //const [firstLottery] = lotteries
+    //const dipLuckyResult = await juejin.dipLucky(firstLottery.history_id)
 
-    growth.dippedLucky = dipLuckyResult.has_dip
-    growth.dipValue = dipLuckyResult.dip_value
-    growth.luckyValue = dipLuckyResult.total_value
-  }
+    //growth.dippedLucky = dipLuckyResult.has_dip
+    //growth.dipValue = dipLuckyResult.dip_value
+    //growth.luckyValue = dipLuckyResult.total_value
+  //}
 
   // 免费抽奖
   const lotteryConfig = await juejin.getLotteryConfig()
